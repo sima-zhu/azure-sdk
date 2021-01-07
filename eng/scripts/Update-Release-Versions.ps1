@@ -52,8 +52,8 @@ function UpdateDocLinks($lang, $pkg, $skipIfNA = $false)
 
   $trimmedPackage = $pkg.Package -replace "@?azure[\.\-/]", ""
 
-  $suffix = ""
-  if (!$pkg.VersionGA -and $pkg.VersionPreview) { $suffix = "-pre" }
+  # $suffix = ""
+  # if (!$pkg.VersionGA -and $pkg.VersionPreview) { $suffix = "-pre" }
 
   $msdocLink = "https://docs.microsoft.com/${lang}/api/overview/azure/${trimmedPackage}-readme${suffix}/"
   $msdocvalid = CheckLink $msdocLink $false 
